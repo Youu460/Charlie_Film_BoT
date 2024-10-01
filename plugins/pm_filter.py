@@ -772,8 +772,9 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"<b>🎪 ᴛɪᴛɪʟᴇ : {search}\n\n┏ 🤴 ᴀsᴋᴇᴅ ʙʏ : {message.from_user.mention}\n┣ ⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ :[XXX Tᴇɴᴛᴀᴄɪᴏɴ](t.me/Tentacion_RoBot)\n┗ 🍁 ᴄʜᴀɴɴᴇʟ : @CINEMACLUBLINKZ \n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : {message.chat.title}</b>"
     if imdb and imdb.get('poster'):
         try:
-            await message.reply_photo(photo="https://telegra.ph/file/00f09b9e0bc9e8da4b178.jpg", caption=cap[:1024],
-                               reply_markup=InlineKeyboardMarkup(btn))
+            hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            await asyncio.sleep(9999)
+            await hehe.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
