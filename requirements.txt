@@ -1,9 +1,9 @@
 aiofiles
-git+https://github.com/MAX-COPYCODE-TG/Charlie_Film_BoT
+git+https://github.com/agronholm/anyio
 aiohttp
 bs4==0.0.1
 datetime
-git+https://github.com/MAX-COPYCODE-TG/Charlie_Film_BoT
+git+https://github.com/MAX-COPYCODE-TG/cinemagoer
 pymongo[srv]==3.12.3
 motor==2.5.1
 marshmallow==3.14.1
