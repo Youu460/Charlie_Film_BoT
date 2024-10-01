@@ -795,7 +795,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("")
+        k = await msg.reply("<b> ➪ɪ ᴄᴏᴜʟᴅɴ'ᴛ ꜰɪɴᴅ ᴀɴʏ ᴍᴏᴠɪᴇ ɪɴ ᴛʜᴀᴛ ɴᴀᴍᴇ...!</b>😢\n\n<b>➪ ᴄʜᴇᴋ sᴘᴇʟʟɪɴɢ..!</b>\n\n<b>➪ᴛʏᴘᴇ ᴀs ɪɴ ɢᴏᴏɢʟᴇ</b>")
         await asyncio.sleep(8)
         await k.delete()
         return
