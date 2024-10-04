@@ -36,6 +36,16 @@ async def give_filter(client, message):
     if k == False:
         await auto_filter(client, message)
 
+@Client.on_message(filters.private & filters.text & filters.incoming)
+async def pm_text(bot, message):
+    content = message.text
+    user = message.from_user.first_name
+    user_id = message.from_user.id
+    if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
+    if user_id in ADMINS: return # ignore admins
+    await message.reply_text("<b>ഇവിടെ മെസ്സേജ് അയച്ചാൽ മൂവി കിട്ടില്ല മൂവി കിട്ടാൻ ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യുക @MM_Archives</b>")
+    await bot.send_message()
+
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
