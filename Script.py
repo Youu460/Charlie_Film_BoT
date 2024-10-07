@@ -3,7 +3,7 @@ class script(object):
 𝘔𝘺 𝘕𝘢𝘮𝘦 𝘐𝘴 <a href=https://t.me/{}>{}</a>, 𝘗𝘳𝘰𝘷𝘪𝘥𝘦 𝘔𝘰𝘷𝘪𝘦𝘴, 𝘑𝘶𝘴𝘵 𝘈𝘥𝘥 𝘔𝘦 𝘛𝘰 𝘠𝘰𝘶𝘳 𝘎𝘳𝘰𝘶𝘱 𝘈𝘯𝘥 𝘌𝘯𝘫𝘰𝘺 😍"""
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
-    ABOUT_TXT = """<i>➠ Owner: href=https://t.me/TG_x_filter>🇮🇳❍ 𝖒𝖆𝖓𝖙𝖎𝖘 ❍™◢ ◤</a>
+    ABOUT_TXT = """<i>➠ Owner: <a href=https://t.me/TG_x_filter>🇮🇳❍ 𝖒𝖆𝖓𝖙𝖎𝖘 ❍™◢ ◤</a>
 ➠ Maintained By: <a href=tg://settings>My Friend</a>
 ➠ Library: Pyrogram 
 ➠ Language: Python3 
