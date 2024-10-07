@@ -91,8 +91,8 @@ ID - <code>{}</code>
 Name - {}
 """
 
-    OWNER_TXT = """<b>⍟───[ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟꜱ ]───⍟</b>
-    
-<b>• ꜰᴜʟʟ ɴᴀᴍᴇ : 𒆜ᴍʀ ᴋᴅ [ᴏғғɪᴄɪᴀɪʟ] 🇮🇳</b>
-<b>• ᴜꜱᴇʀɴᴀᴍᴇ : @MalluBlasters</b>
-<b>• ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href=https://t.me/MalluBlasters>ᴄʟɪᴄᴋ ʜᴇʀᴇ</b></a>"""
+    OWNER_TXT = """<b><u>🍁OWNER DETAILS🍁</u></b>
+
+<i>➥ Full Name: 🇮🇳❍ 𝖒𝖆𝖓𝖙𝖎𝖘 ❍™◢ ◤ 
+➥ UserName: @TG_x_filter
+➥ Permanent Dm Link: <a href=https://t.me/TG_x_filter>Click Here</i></a>"""
