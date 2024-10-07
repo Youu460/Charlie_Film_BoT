@@ -685,10 +685,10 @@ async def auto_filter(client, msg, spoll=False):
             search = message.text
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
             if not files:
-                google = search.replace(' ', "+")
-                button = [[InlineKeyboardButton("🔍 𝗖𝗛𝗘𝗖𝗞 𝗦𝗣𝗘𝗟𝗟𝗜𝗡𝗚 🔎", url=f"https://google.com/search?q={google}")]]
-                k = await message.reply(f'<b>👋 ʜᴇʏ {message.from_user.mention}!!\n\n » ɴᴏ ꜱᴇᴀʀᴄʜ ʀᴇꜱᴜʟᴛ ꜰᴏᴜɴᴅ ꜰᴏʀ ʏᴏᴜʀ ᴍᴏᴠɪᴇ.\n\n» ꜱᴇɴᴅ ᴍᴇ ᴀ ᴄᴏʀʀᴇᴄᴛ ꜱᴩᴇʟʟɪɴɢ. ᴏʀ ᴩʟᴇᴀꜱᴇ ᴄʜᴇᴄᴋ ᴛʜᴀᴛ ᴍᴏᴠɪᴇ ᴏᴛᴛ ʀᴇʟᴇᴀꜱᴇᴅ.!</b>', reply_markup=InlineKeyboardMarkup(button))
-                return
+                if settings["spell_check"]:
+                    return await advantage_spell_chok(msg)
+                else:
+                    return
         else:
             return
     else:
