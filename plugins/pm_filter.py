@@ -159,7 +159,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('<i>Movie not Found Dude 😔\n\n Do search in google and copy that name and send</i>')
+            k = await query.message.edit('<b>👋Hey <a href=tg://settings> My Friend💞</a></b>\n\n<i>Sorry, No Movie/Series Related To The Given Word Was Found😔</i>\n\n<i> Please Go to Google And Confirm the Correct Spelling🙏</i>\n\n<b>Click Here » <a href="https://www.google.com">🔍Search Google 🔎</a></b>\n\n<i>✏️ Or Your Spelling is Correct Report to Admins for Add Requested Your Movie File :- @admins</i>')
             await asyncio.sleep(10)
             await k.delete()
 
