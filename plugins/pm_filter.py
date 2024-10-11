@@ -805,6 +805,13 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
+        hmm = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton("🕵️‍♂️ Search On Google 🕵️‍♂️", url=f"https://google.com/search?q={search}")
+            ]
+        ]
+    )
         k = await msg.reply("<i>I couldn't find the file you requested 😕</i>\n<i>Try to do the following...</i>\n\n=> <i>Request with correct spelling</i>\n\n=> <i>Don't ask movies that are not released in OTT platforms</i>\n\n=> <i>Try to ask in [MovieName, Language] this format.</i>\n\n=> <i>Use the button below to search on Google 😌</i>")
         await asyncio.sleep(8)
         await k.delete()
@@ -834,6 +841,13 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
+        hmm = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton("🕵️‍♂️ Search On Google 🕵️‍♂️", url=f"https://google.com/search?q={search}")
+            ]
+        ]
+    )
         k = await msg.reply("<i>I couldn't find the file you requested 😕</i>\n<i>Try to do the following...</i>\n\n=> <i>Request with correct spelling</i>\n\n=> <i>Don't ask movies that are not released in OTT platforms</i>\n\n=> <i>Try to ask in [MovieName, Language] this format.</i>\n\n=> <i>Use the button below to search on Google 😌</i>")
         await asyncio.sleep(8)
         await k.delete()
