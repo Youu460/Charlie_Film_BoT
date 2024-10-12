@@ -807,7 +807,7 @@ async def advantage_spell_chok(msg):
     if not g_s:
         button = [[
            InlineKeyboardButton("🕵️‍♂️ Search On Google 🕵️‍♂️", url=f"https://google.com/search?q={google}")
-        ]])
+        ]]
         k = await msg.reply(f"<b>Hey 👋{message.from_user.mention}</b>\n\n<i>I couldn't find the file you requested 😕</i>\n<i>Try to do the following...</i>\n\n=> <i>Request with correct spelling</i>\n\n=> <i>Don't ask movies that are not released in OTT platforms</i>\n\n=> <i>Try to ask in [MovieName, Language] this format.</i>\n\n=> <i>Use the button below to search on Google 😌</i>", reply_markup=InlineKeyboardMarkup(button)
         await asyncio.sleep(8)
         await k.delete()
@@ -839,7 +839,7 @@ async def advantage_spell_chok(msg):
     if not movielist:
         button = [[ 
            InlineKeyboardButton("🕵️‍♂️ Search On Google 🕵️‍♂️", url=f"https://google.com/search?q={google}")
-        ]])
+        ]]
         k = await msg.reply(f"<b>Hey 👋{message.from_user.mention}</b>\n\n<i>I couldn't find the file you requested 😕</i>\n<i>Try to do the following...</i>\n\n=> <i>Request with correct spelling</i>\n\n=> <i>Don't ask movies that are not released in OTT platforms</i>\n\n=> <i>Try to ask in [MovieName, Language] this format.</i>\n\n=> <i>Use the button below to search on Google 😌</i>", reply_markup=InlineKeyboardMarkup(button)
         await asyncio.sleep(8)
         await k.delete()
