@@ -3,15 +3,19 @@ class script(object):
 𝘔𝘺 𝘕𝘢𝘮𝘦 𝘐𝘴 <a href=https://t.me/{}>{}</a>, 𝘗𝘳𝘰𝘷𝘪𝘥𝘦 𝘔𝘰𝘷𝘪𝘦𝘴, 𝘑𝘶𝘴𝘵 𝘈𝘥𝘥 𝘔𝘦 𝘛𝘰 𝘠𝘰𝘶𝘳 𝘎𝘳𝘰𝘶𝘱 𝘈𝘯𝘥 𝘌𝘯𝘫𝘰𝘺 😍"""
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
-    ABOUT_TXT = """<b><u>⚠️ABOUT ME⚠️</u></b>
+    ABOUT_TXT = """<b>━━━❰ {} ❱━━━➣</b>
+    
+<b>○ <i>Owner Name : <a href=https://t.me/TG_x_filter>🇮🇳 𝗛𝗘𝗗𝗗𝗬 ◢ ◤</b></a></i>
 
-<i>➠ Owner: <a href=https://t.me/TG_x_filter>🇮🇳❍ 𝖒𝖆𝖓𝖙𝖎𝖘 ❍™◢ ◤</a>
-➠ Maintained By: <a href=tg://settings>My Friend</a>
-➠ Library: Pyrogram 
-➠ Language: Python3 
-➠ Database: mongoDB 
-➠ Server: Koyeb
-➠ Build States: v1.0.1 [ Beta ]</i>"""
+<b>○ <i>Creator : <a href=tg://settings>My Friend</b></a></i>
+
+<b>○ <i>Library : Pyrogram</b></i>
+
+<b>○ <i>Language : Python3</b></i>
+
+<b>○ <i>Data Base : MongoDB</b></i>
+
+<b>○ <i>Build Status : v5.2 [Stable]</b></i> """
     SETTING_TXT = """<b>ѕeттιngѕ
 ~ sᴇᴛᴛɪɴɢs ɪs ᴍᴏsᴛ ɪᴍᴘᴏʀᴛᴀɴᴛ ғᴇᴀᴛᴜʀᴇs ɪɴ ᴛʜɪs ʙᴏᴛ.
 ~ ʏᴏᴜ ᴄᴀɴ ᴇᴀsɪʟʏ ᴄᴜsᴛᴏᴍɪᴢᴇ ᴛʜɪs ʙᴏᴛ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
