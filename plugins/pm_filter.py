@@ -30,6 +30,8 @@ BUTTONS = {}
 SPELL_CHECK = {}
 NON_IMG ="""<b><i>👋Hello <a href=tg://settings >My Friend</a></i></b>\n\n<b>❝ <i>Use the Button Below to Search on Google or IMDB And Copy the Correct Movie Name And Paste.</i></b>\n\n<b>❝ <i>Don't Ask Movies that Are Not Released in OTT Platform.</i></b>\n\n<b>❝ <i>Try to Ask in [ Movie name, Year ] This Fromat.</i></b>\n\n<i><b><u>⚠️ Don't Use: ➲ [+:;'*!-&.. etc</i></b></u>"""
 
+LANGUAGE = ["malayalam", "tamil", "english", "hindi", "telugu", "kannada"]
+
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
     k = await manual_filters(client, message)
@@ -808,7 +810,7 @@ async def auto_filter(client, msg, spoll=False):
     )
     btn.insert(1, 
          [
-             InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
+             InlineKeyboardButton("Language", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
              InlineKeyboardButton(f"ғɪʟᴇs: {len(btn)}", callback_data="files")
          ]
     )
