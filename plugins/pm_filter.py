@@ -77,7 +77,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"▫[{get_size(file.file_size)}] ▸ {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f" [{get_size(file.file_size)}]  {file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -89,25 +89,14 @@ async def next_page(bot, query):
                     text=f"{file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
                 InlineKeyboardButton(
-                    text=f"▫{get_size(file.file_size)}",
+                    text=f" {get_size(file.file_size)}",
                     callback_data=f'files_#{file.file_id}',
                 ),
             ]
            for file in files
 
         ]
-    btn.insert(0, 
-        [
-            InlineKeyboardButton(f' 🔎 {search} 🔍 ', 'qinfo')
-        ]
-    )
-    btn.insert(1, 
-         [
-             InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
-             InlineKeyboardButton(f"ғɪʟᴇs: {len(btn)}", callback_data="files")
-         ]
-    )
-
+    
     if 0 < offset <= 10:
         off_set = 0
     elif offset == 0:
@@ -116,20 +105,21 @@ async def next_page(bot, query):
         off_set = offset - 10
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("« 𝓑𝓪𝓬𝓴", callback_data=f"next_{req}_{key}_{off_set}"),
-             InlineKeyboardButton(f"📘{math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}📘",
+            [InlineKeyboardButton("⭅ 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"),
+             InlineKeyboardButton(f" {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}",
                                   callback_data="pages")]
         )
     elif off_set is None:
         btn.append(
-            [InlineKeyboardButton(f"📗𝓟𝓪𝓰𝓮: {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton("𝓝𝓮𝔁𝓽 »", callback_data=f"next_{req}_{key}_{n_offset}")])
+            [InlineKeyboardButton("❏ 𝗣𝗮𝗴𝗲", callback_data="pages"),
+             InlineKeyboardButton(f" {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
+             InlineKeyboardButton("𝗡𝗲𝘅𝘁 ⇛", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
-                InlineKeyboardButton("« 𝓑𝓪𝓬𝓴", callback_data=f"next_{req}_{key}_{off_set}"),
-                InlineKeyboardButton(f"📙{math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}📙", callback_data="pages"),
-                InlineKeyboardButton("𝓝𝓮𝔁𝓽 »", callback_data=f"next_{req}_{key}_{n_offset}")
+                InlineKeyboardButton("⭅ 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton(f" {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
+                InlineKeyboardButton("𝗡𝗲𝘅𝘁 ⇛", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
     try:
@@ -500,7 +490,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "owner":
         buttons = [[
             InlineKeyboardButton('⭅ 𝗕𝗮𝗰𝗸', callback_data='start'),
-            InlineKeyboardButton('📞Cᴏɴᴛᴀᴄᴛ', url='https://t.me/MalluBlasters')
+            InlineKeyboardButton('𝗖𝗼𝗻𝘁𝗮𝗰𝘁 📞', url='https://t.me/MalluBlasters')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -511,7 +501,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "stats":
         buttons = [[
             InlineKeyboardButton('⭅ 𝗕𝗮𝗰𝗸', callback_data='about'),
-            InlineKeyboardButton('♻️', callback_data='rfrsh')
+            InlineKeyboardButton('𝗥𝗲𝗳𝗿𝗲𝘀𝗵 ⏳', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
@@ -530,7 +520,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer("Fetching MongoDb DataBase")
         buttons = [[
             InlineKeyboardButton('⭅ 𝗕𝗮𝗰𝗸', callback_data='about'),
-            InlineKeyboardButton('♻️', callback_data='rfrsh')
+            InlineKeyboardButton('𝗥𝗲𝗳𝗿𝗲𝘀𝗵 ⏳', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
@@ -627,7 +617,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"▫[{get_size(file.file_size)}] ▸ {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}]  {file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -664,12 +654,13 @@ async def auto_filter(client, msg, spoll=False):
         BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
-            [InlineKeyboardButton(text=f"📕𝓟𝓪𝓰𝓮: 1/{math.ceil(int(total_results) / 10)}", callback_data="pages"),
-             InlineKeyboardButton(text="𝓝𝓮𝔁𝓽 »", callback_data=f"next_{req}_{key}_{offset}")]
+            [InlineKeyboardButton("❏ 𝗣𝗮𝗴𝗲𝘀", callback_data="pages"),
+             InlineKeyboardButton(text=f"1/{math.ceil(int(total_results) / 10)}", callback_data="pages"),
+             InlineKeyboardButton(text="𝗡𝗲𝘅𝘁 ⇛", callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
         btn.append(
-            [InlineKeyboardButton(text="🚫 𝓝𝓸 𝓜𝓸𝓻𝓮 𝓝𝓮𝔁𝓽 𝓟𝓪𝓰𝓮𝓼 🚫", callback_data="pages")]
+            [InlineKeyboardButton(text="🚫 𝗡𝗼 𝗠𝗼𝗿𝗲 𝗡𝗲𝘅𝘁 𝗣𝗮𝗴𝗲𝘀 🚫", callback_data="pages")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
