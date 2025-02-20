@@ -252,10 +252,29 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     
     if offset != "":
         btn.append(
-            [InlineKeyboardButton("📖 𝑷𝒂𝒈𝒆𝒔", callback_data="pages"), InlineKeyboardButton(text=f"1/{math.ceil(int(total)/8)}",callback_data="pages"), InlineKeyboardButton(text="𝑵𝒆𝒙𝒕 ⏩",callback_data=f"next_{req}_{key}_{offset}")]
-        )    
-    await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
-    temp.SEND_ALL_TEMP[key] = files
+            [InlineKeyboardButton("« 𝓑𝓪𝓬𝓴", callback_data=f"next_{req}_{key}_{off_set}"),
+             InlineKeyboardButton(f"📘{math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}📘",
+                                  callback_data="pages")]
+        )
+    elif off_set is None:
+        btn.append(
+            [InlineKeyboardButton(f"📗𝓟𝓪𝓰𝓮: {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
+             InlineKeyboardButton("𝓝𝓮𝔁𝓽 »", callback_data=f"next_{req}_{key}_{n_offset}")])
+    else:
+        btn.append(
+            [
+                InlineKeyboardButton("« 𝓑𝓪𝓬𝓴", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton(f"📙{math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}📙", callback_data="pages"),
+                InlineKeyboardButton("𝓝𝓮𝔁𝓽 »", callback_data=f"next_{req}_{key}_{n_offset}")
+            ],
+        )
+    try:
+        await query.edit_message_reply_markup(
+            reply_markup=InlineKeyboardMarkup(btn)
+        )
+    except MessageNotModified:
+        pass
+    await query.answer()
 
 
 @Client.on_callback_query()
