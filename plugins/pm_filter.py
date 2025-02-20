@@ -704,7 +704,7 @@ async def auto_filter(client, msg, spoll=False):
     )
     btn.insert(1, 
          [
-             InlineKeyboardButton("Language", callback_data=f"languages#{search.replace(' ', '_')}#{key}"),
+             InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
              InlineKeyboardButton(f"ғɪʟᴇs: {len(btn)}", callback_data="files")
          ]
     )
