@@ -8,7 +8,7 @@ from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from database.ia_filterdb import Media, get_file_details, unpack_new_file_id
 from database.users_chats_db import db
-from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT
+from info import CHANNELS, ADMINS, AUTH_CHANNEL, LOG_CHANNEL, PICS, BATCH_FILE_CAPTION, CUSTOM_FILE_CAPTION, PROTECT_CONTENT, FORCE_IMG, FORCE_SUB_TEXT
 from utils import get_settings, get_size, is_subscribed, save_group_settings, temp
 from database.connections_mdb import active_connection
 import re
@@ -62,7 +62,7 @@ async def start(client, message):
         try:
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
         except ChatAdminRequired:
-            logger.error("Nᴀ FᴏʀᴄᴇSᴜʙ Cʜᴀɴɴᴇʟ Lᴀ Aᴅᴍɪɴ Aʜ Eʀᴜᴋᴇɴ Nᴀɴᴜ Cʜᴇᴄᴋ Pᴀɴɴɪᴋᴏɴɢᴀ")
+            logger.error("Make sure Bot is admin in Forcesub channel")
             return
         btn = [
             [
@@ -81,7 +81,8 @@ async def start(client, message):
                 btn.append([InlineKeyboardButton(" 𝗧𝗿𝘆 𝗔𝗴𝗮𝗶𝗻", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**താഴെ ഉള്ള 𝗝𝗼𝗶𝗻 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 ക്ലിക്ക് ചെയ്ത് കഴിഞ്ഞ് 𝗧𝗿𝘆 𝗔𝗴𝗮𝗶𝗻 ക്ലിക്ക് ചെയ്‌താൽ നിങ്ങൾക് സിനിമ ലഭിക്കുന്നതാണ്.!\n\nClick the 𝗝𝗼𝗶𝗻 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 and then click 𝗧𝗿𝘆 𝗔𝗴𝗮𝗶𝗻 and you will get the File.!**",
+            photo=FORCE_IMG,
+            caption=FORCE_SUB_TEXT,
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
