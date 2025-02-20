@@ -42,7 +42,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('⚡ ᴄʟɪᴄᴋ ʜᴇʀᴇ ꜰᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴs ⚡', callback_data='start')
+            InlineKeyboardButton('✗ 𝗖𝗹𝗶𝗰𝗸 𝗧𝗼 𝗖𝗹𝗼𝘀𝗲 𝗧𝗵𝗶𝘀 𝗕𝘂𝘁𝘁𝗼𝗻𝘀 ✗', callback_data='closeme')
+            ],[
+            InlineKeyboardButton('🤴 𝗢𝘄𝗻𝗲𝗿', callback_data='owner'),
+            InlineKeyboardButton('𝗦𝘂𝗽𝗽𝗼𝗿𝘁 💬', callback_data='support')
+            ],[
+            InlineKeyboardButton('⚠️ 𝗔𝗯𝗼𝘂𝘁', callback_data='about'),
+            InlineKeyboardButton('𝗖𝗹𝗼𝘀𝗲 ✗', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -61,7 +67,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🤖 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url=invite_link.invite_link
+                    "𝗝𝗼𝗶𝗻 𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url=invite_link.invite_link
                 )
             ]
         ]
@@ -70,19 +76,25 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton(" 🔄 Tʀʏ Aɢᴀɪɴ", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton(" 𝗧𝗿𝘆 𝗔𝗴𝗮𝗶𝗻", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton(" 🔄 Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton(" 𝗧𝗿𝘆 𝗔𝗴𝗮𝗶𝗻", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Yᴇɴɴᴏᴅᴀ Uᴘᴅᴀᴛᴇs CʜᴀɴɴᴇʟA Jᴏɪɴ Pᴀɴɴᴀ Tʜᴀ Yᴇɴɴᴀ Usᴇ Pᴀɴɴᴀ Mᴜᴅɪʏᴜᴍ**",
+            text="**താഴെ ഉള്ള 𝗝𝗼𝗶𝗻 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 ക്ലിക്ക് ചെയ്ത് കഴിഞ്ഞ് 𝗧𝗿𝘆 𝗔𝗴𝗮𝗶𝗻 ക്ലിക്ക് ചെയ്‌താൽ നിങ്ങൾക് സിനിമ ലഭിക്കുന്നതാണ്.!\n\nClick the 𝗝𝗼𝗶𝗻 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 and then click 𝗧𝗿𝘆 𝗔𝗴𝗮𝗶𝗻 and you will get the File.!**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('⚡ ᴄʟɪᴄᴋ ʜᴇʀᴇ ꜰᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴs ⚡', callback_data='start')
+            InlineKeyboardButton('✗ 𝗖𝗹𝗶𝗰𝗸 𝗧𝗼 𝗖𝗹𝗼𝘀𝗲 𝗧𝗵𝗶𝘀 𝗕𝘂𝘁𝘁𝗼𝗻𝘀 ✗', callback_data='closeme')
+            ],[
+            InlineKeyboardButton('🤴 𝗢𝘄𝗻𝗲𝗿', callback_data='owner'),
+            InlineKeyboardButton('𝗦𝘂𝗽𝗽𝗼𝗿𝘁 💬', callback_data='support')
+            ],[
+            InlineKeyboardButton('⚠️ 𝗔𝗯𝗼𝘂𝘁', callback_data='about'),
+            InlineKeyboardButton('𝗖𝗹𝗼𝘀𝗲 ✗', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
