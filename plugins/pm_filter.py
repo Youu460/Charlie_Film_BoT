@@ -617,7 +617,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}]  {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f" [{get_size(file.file_size)}]  {file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -626,7 +626,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"▫{file.file_name}",
+                    text=f"{file.file_name}",
                     callback_data=f'{pre}#{file.file_id}',
                 ),
                 InlineKeyboardButton(
@@ -643,7 +643,7 @@ async def auto_filter(client, msg, spoll=False):
         req = message.from_user.id if message.from_user else 0
         btn.append(
             [InlineKeyboardButton("❏ 𝗣𝗮𝗴𝗲𝘀", callback_data="pages"),
-             InlineKeyboardButton(text=f"1/{math.ceil(int(total_results) / 10)}", callback_data="pages"),
+             InlineKeyboardButton(text=f" 1/{math.ceil(int(total_results) / 10)}", callback_data="pages"),
              InlineKeyboardButton(text="𝗡𝗲𝘅𝘁 ⇛", callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
@@ -685,7 +685,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>🎪 ᴛɪᴛɪʟᴇ : {search}\n\n┏ 🤴 ᴀsᴋᴇᴅ ʙʏ : {message.from_user.mention}\n┣ ⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ :[XXX Tᴇɴᴛᴀᴄɪᴏɴ](t.me/Tentacion_RoBot)\n┗ 🍁 ᴄʜᴀɴɴᴇʟ : @CINEMACLUBLINKZ \n\n★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : {message.chat.title}</b>"
+        cap = f"<b>⚬ The Results For : {search}</b>\n\n<b>⚬ Request By : {message.from_user.mention}</b>\n\n<b>⚬ Total Files : {total_results}</b>\n\n<b>⚬ Powered By : {message.chat.title}</b>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
@@ -708,11 +708,11 @@ async def advantage_spell_chok(msg):
     search = msg.text.replace(" ", "+")
     btn = [[
         InlineKeyboardButton(
-            text="🔎 Google 🔍",
+            text="🔎 𝗚𝗼𝗼𝗴𝗹𝗲 🔍",
             url=f"https://google.com/search?q={search}"
         ),
         InlineKeyboardButton(
-            text="🔮 IMDB 🔮",
+            text="🔮 𝗜𝗠𝗗𝗕 🔮",
             url=f"https://imdb.com/find?q={search}")
 
     ]]
