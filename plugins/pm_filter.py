@@ -268,13 +268,8 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("𝓝𝓮𝔁𝓽 »", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
-    try:
-        await query.edit_message_reply_markup(
-            reply_markup=InlineKeyboardMarkup(btn)
-        )
-    except MessageNotModified:
-        pass
-    await query.answer()
+    await query.edit_message_reply_markup(InlineKeyboardMarkup(btn))
+    temp.SEND_ALL_TEMP[key] = files
 
 
 @Client.on_callback_query()
