@@ -619,7 +619,7 @@ async def auto_filter(client, msg, spoll=False):
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'🔍 {search} 🔎', url=f"https://t.me/HP_MOVIES_WORLD")]]) 
         )
         settings = await get_settings(message.chat.id)
-        await m.delete()
+        await msg.message.delete()
     pre = 'filep' if settings['file_secure'] else 'file'
     if settings["button"]:
         btn = [
