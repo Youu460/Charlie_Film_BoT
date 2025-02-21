@@ -618,6 +618,7 @@ async def auto_filter(client, msg, spoll=False):
         m=await message.reply_sticker("CAACAgQAAxkBAAEKSxplArIUActk4ORQuFn3DHFvBqQCOgACBQMAAnJxFyVYcSIunXgGjjAE",
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'Seaching for {search} 🔎', url=f"https://t.me/HP_MOVIES_WORLD")]]) 
         )
+        await msg.message.delete()
     pre = 'filep' if settings['file_secure'] else 'file'
     if settings["button"]:
         btn = [
