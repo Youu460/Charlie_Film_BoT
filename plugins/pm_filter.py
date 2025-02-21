@@ -613,14 +613,13 @@ async def auto_filter(client, msg, spoll=False):
         else:
             return
     else:
-        settings = await get_settings(msg.message.chat.id)
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
         m=await message.reply_sticker("CAACAgQAAxkBAAEKSxplArIUActk4ORQuFn3DHFvBqQCOgACBQMAAnJxFyVYcSIunXgGjjAE",
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'🔍 {search} 🔎', url=f"https://t.me/HP_MOVIES_WORLD")]]) 
         )
-        await asyncio.sleep()
-        await m.delete()
+        settings = await get_settings(message.chat.id)
+        await msg.message.delete()
     pre = 'filep' if settings['file_secure'] else 'file'
     if settings["button"]:
         btn = [
