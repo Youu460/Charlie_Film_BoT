@@ -601,7 +601,7 @@ async def auto_filter(client, msg, spoll=False):
         if 2 < len(message.text) < 100:
             search = message.text
             m=await message.reply_sticker("CAACAgQAAxkBAAEKSxplArIUActk4ORQuFn3DHFvBqQCOgACBQMAAnJxFyVYcSIunXgGjjAE",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'Seaching for {search} 🔎', url=f"https://t.me/HP_MOVIES_WORLD")]]) 
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f'🔍 {search} 🔎', url=f"https://t.me/HP_MOVIES_WORLD")]]) 
             )
             files, offset, total_results = await get_search_results(search.lower(), offset=0, filter=True)
             if not files:
