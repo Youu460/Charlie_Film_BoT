@@ -441,7 +441,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer("⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠\n\nᴀꜰᴛᴇʀ 10 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ\n\nɪꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ꜱᴇᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴍᴏᴠɪᴇ / sᴇʀɪᴇs ꜰɪʟᴇ, ʟᴏᴏᴋ ᴀᴛ ᴛʜᴇ ɴᴇxᴛ ᴘᴀɢᴇ\n\n❣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀʟᴀ.ᴄᴏᴍ", show_alert=True)
     elif query.data == "closeme":
         buttons = [[
-            InlineKeyboardButton('✨ 𝗖𝗹𝗶𝗰𝗸 𝗛𝗲𝗿𝗲 𝗙𝗼𝗿 𝗠𝗼𝗿𝗲 𝗕𝘂𝘁𝘁𝗼𝗻𝘀 ✨', callback_data='start')
+            InlineKeyboardButton('✨ ᴄʟιᴄᴋ нєʀє ғoʀ мoʀє ʙυττoɴs ✨', callback_data='start')
         ]]   
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -451,7 +451,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('✗ 𝗖𝗹𝗶𝗰𝗸 𝗧𝗼 𝗖𝗹𝗼𝘀𝗲 𝗧𝗵𝗶𝘀 𝗕𝘂𝘁𝘁𝗼𝗻𝘀 ✗', callback_data='closeme')
+            InlineKeyboardButton('✗ ᴄʟιᴄᴋ το ϲʟοѕє τнιѕ ʙυττoɴs ✗', callback_data='closeme')
             ],[
             InlineKeyboardButton('👨‍💻 οωɴєʀ', callback_data='owner'),
             InlineKeyboardButton('ѕυᴘᴘοʀτ 🧩', callback_data='support')
