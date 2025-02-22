@@ -12,7 +12,7 @@ logger.setLevel(logging.ERROR)
 async def addconnection(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"Nᴇɴɢᴀ Aᴅᴅʀᴇss Iʟʟᴀ Tʜᴀ Aᴅᴍɪɴ 🤣 Use /connect {message.chat.id} in PM")
+        return await message.reply(f"You are anonymous admin. Use /connect {message.chat.id} in PM")
     chat_type = message.chat.type
 
     if chat_type == enums.ChatType.PRIVATE:
@@ -22,7 +22,7 @@ async def addconnection(client, message):
             await message.reply_text(
                 "<b>Enter in correct format!</b>\n\n"
                 "<code>/connect groupid</code>\n\n"
-                "<i>Yᴇɴɴᴀ Uɴɢᴀ Gʀᴏᴜᴘ Lᴀ Aᴅᴅ Pᴀɴɴɪ Gʀᴏᴜᴘ Iᴅ Yᴇᴅᴜᴛʜᴜᴋᴏɴɢᴀ  <code>/id</code></i>",
+                "<b>Get your Group id by adding this bot to your group and use  <code>/id</code></b>",
                 quote=True
             )
             return
