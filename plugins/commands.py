@@ -505,10 +505,10 @@ async def save_template(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("Nᴀ Uɴɢᴀ Gʀᴏᴜᴘ Lᴀ Eʀᴜᴋᴇɴ Nᴀɴᴜ Cʜᴇᴄᴋ Pᴀɴɴᴜɴɢᴀ!!", quote=True)
+                await message.reply_text("Make sure I'm present in your group!!", quote=True)
                 return
         else:
-            await message.reply_text("Nᴀ Iɴɴᴜᴍ Eɴᴛʜᴀ Gʀᴏᴜᴘ Lᴀʏᴜᴍ Aᴅᴅ Pᴀɴɴᴀʟᴀ!", quote=True)
+            await message.reply_text("I'm not connected to any groups!", quote=True)
             return
 
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
