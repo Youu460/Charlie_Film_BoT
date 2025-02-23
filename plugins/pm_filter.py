@@ -437,21 +437,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "pages":
         await query.answer()
-    elif query.data == "reqinfo":
-        await query.answer("⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠\n\nᴀꜰᴛᴇʀ 10 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ\n\nɪꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ꜱᴇᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴍᴏᴠɪᴇ / sᴇʀɪᴇs ꜰɪʟᴇ, ʟᴏᴏᴋ ᴀᴛ ᴛʜᴇ ɴᴇxᴛ ᴘᴀɢᴇ\n\n❣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀʟᴀ.ᴄᴏᴍ", show_alert=True)
-    elif query.data == "closeme":
-        buttons = [[
-            InlineKeyboardButton('❖ Click Here For More Buttons ❖', callback_data='start')
-        ]]   
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ 𝗔𝗱𝗱 𝗺𝗲 𝘁𝗼 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('➜ 𝗔𝗱𝗱 𝗺𝗲 𝘁𝗼 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽 ➜', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('✘ 𝗖𝗹𝗼𝘀𝗲', callback_data='close_data'),
             InlineKeyboardButton('𝗔𝗯𝗼𝘂𝘁 〄', callback_data='about')
