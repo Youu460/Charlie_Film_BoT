@@ -37,8 +37,4 @@ ID - <code>{}</code>
 Name - {}
 """
 
-    OWNER_TXT = """<b><u>🍁OWNER DETAILS🍁</u></b>
-
-<i>➥ Full Name: 🇮🇳❍ 𝖒𝖆𝖓𝖙𝖎𝖘 ❍™◢ ◤ 
-➥ UserName: @TG_x_filter
-➥ Permanent Dm Link: <a href=https://t.me/TG_x_filter>Click Here</i></a>"""
+    FILE_CAPTION = """<b>📁File Name :</b> <b><code>{file_name}</code></b>"""
