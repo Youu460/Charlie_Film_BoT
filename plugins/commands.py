@@ -237,11 +237,11 @@ async def start(client, message):
         f_caption = f"{files.file_name}"
     buttons = [
                     [
-                        InlineKeyboardButton('💥 ɢʀᴏᴜᴘ', url="https://t.me/+lTcjMF6iKqs1MjJl"),
-                        InlineKeyboardButton('💌 ᴄʜᴀɴɴᴇʟ', url="https://t.me/CinemaShopLinkz")
+                        InlineKeyboardButton('💥 𝗚𝗿𝗼𝘂𝗽 ', url="https://t.me/+lTcjMF6iKqs1MjJl"),
+                        InlineKeyboardButton('𝗗𝗲𝗹𝗲𝘁𝗲 ⚠️', url="https://t.me/CinemaShopLinkz")
                     ],
                     [
-                        InlineKeyboardButton(text=f'🌿 Fɪʟᴇ sɪᴢᴇ 【 {size} 】🌿', callback_data='gxneo')
+                        InlineKeyboardButton(text=f'🌿 𝗙𝗶𝗹𝗲 𝗦𝗶𝘇𝗲 【 {size} 】🌿', callback_data='gxneo')
                     ]
                     ]
     await client.send_cached_media(
