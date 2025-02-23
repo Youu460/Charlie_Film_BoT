@@ -77,7 +77,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"▢ ⟮ {get_size(file.file_size)} ⟯ ▷  {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"📥 {get_size(file.file_size)}📁{file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -381,10 +381,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('💥 ɢʀᴏᴜᴘ', url="https://t.me/+lTcjMF6iKqs1MjJl"),
-                          InlineKeyboardButton('💌 ᴄʜᴀɴɴᴇʟ', url="https://t.me/CINEMACLUBLINKZ")
-                       ],[
-                          InlineKeyboardButton(text=f'🌿 Fɪʟᴇ sɪᴢᴇ 【 {size} 】🌿', callback_data='gxneo')
+                          InlineKeyboardButton('💥 𝗚𝗿𝗼𝘂𝗽', url="https://t.me/+lTcjMF6iKqs1MjJl"),
+                          InlineKeyboardButton('𝗗𝗲𝗹𝗲𝘁𝗲 ⚠️', callback_data='close_data')
+                          ],[
+                          InlineKeyboardButton(text=f'🌿 𝗙𝗶𝗹𝗲 𝗦𝗶𝘇𝗲 【 {size} 】🌿', callback_data='gxneo')
                          ]
                         ]
                     )
@@ -427,10 +427,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                  InlineKeyboardButton('💥 ɢʀᴏᴜᴘ', url="https://t.me/+lTcjMF6iKqs1MjJl"),
-                  InlineKeyboardButton('💌 ᴄʜᴀɴɴᴇʟ', url="https://t.me/CINEMACLUBLINKZ")
-               ],[
-                  InlineKeyboardButton(text=f'🌿 Fɪʟᴇ sɪᴢᴇ 【 {size} 】🌿', callback_data='gxneo')
+                  InlineKeyboardButton('💥 𝗚𝗿𝗼𝘂𝗽', url="https://t.me/+lTcjMF6iKqs1MjJl"),
+                  InlineKeyboardButton('𝗗𝗲𝗹𝗲𝘁𝗲 ⚠️', callback_data='close_data')
+                  ],[
+                  InlineKeyboardButton(text=f'🌿 𝗙𝗶𝗹𝗲 𝗦𝗶𝘇𝗲 【 {size} 】🌿', callback_data='gxneo')
                  ]
                 ]
             )
@@ -581,7 +581,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"▢ ⟮ {get_size(file.file_size)} ⟯ ▷  {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"📥 {get_size(file.file_size)}📁{file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
@@ -612,7 +612,7 @@ async def auto_filter(client, msg, spoll=False):
         )
     else:
         btn.append(
-            [InlineKeyboardButton(text="🚫 𝗡𝗼 𝗠𝗼𝗿𝗲 𝗡𝗲𝘅𝘁 𝗣𝗮𝗴𝗲𝘀 🚫", callback_data="pages")]
+            [InlineKeyboardButton(text="📍 𝗡𝗼 𝗠𝗼𝗿𝗲 𝗡𝗲𝘅𝘁 𝗣𝗮𝗴𝗲𝘀 📍", callback_data="pages")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
