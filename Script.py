@@ -1,6 +1,7 @@
 class script(object):
-    START_TXT = """𝘏𝘦𝘭𝘭𝘰 {},
-𝘔𝘺 𝘕𝘢𝘮𝘦 𝘐𝘴 <a href=https://t.me/{}>{}</a>, 𝘗𝘳𝘰𝘷𝘪𝘥𝘦 𝘔𝘰𝘷𝘪𝘦𝘴, 𝘑𝘶𝘴𝘵 𝘈𝘥𝘥 𝘔𝘦 𝘛𝘰 𝘠𝘰𝘶𝘳 𝘎𝘳𝘰𝘶𝘱 𝘈𝘯𝘥 𝘌𝘯𝘫𝘰𝘺 😍"""
+    START_TXT = """<b><i>🥀Hello {}, Nice to meet you👀</i></b>
+    
+<b><i>I can provide movies and Web-Series for you just make to admin your group and Ues me..💫</i></b>"""
     
     ABOUT_TXT = """<b>━━━❰ {} ❱━━━➣</b>
     
@@ -14,15 +15,17 @@ class script(object):
 
 <b>○ <i>Data Base : MongoDB</b></i>
 
-<b>○ <i>Build Status : v5.2 [Stable]</b></i> """
-    SUPPORT_TXT = """〰〰〰〰〰〰〰〰〰〰〰〰〰 """
+<b>○ <i>Build Status : v5.2 [Stable]</b></i>
+
+〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰"""
     
     STATUS_TXT = """<b><u>📊 STATUS BOARD 📊</u></b>
 
-<i>➥ Total Files: <code>{}</code></i>
-<i>➥ Total Members: <code>{}</code></i>
-<i>➥ Total Chats: <code>{}</code></i>
-<i>➥ Used Storage: <code>{}</code> MB</i>"""
+<b>➥ Total Files: <code>{}</code></b>
+<b>➥ Total Members: <code>{}</code></b>
+<b>➥ Total Chats: <code>{}</code></b>
+<b>➥ Used Storage: <code>{}</code></b>
+〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰"""
     
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
