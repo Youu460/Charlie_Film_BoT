@@ -451,13 +451,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('✗ Click To Close This Buttons ✗', callback_data='closeme')
+            InlineKeyboardButton('➕ 𝗔𝗱𝗱 𝗺𝗲 𝘁𝗼 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽 ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('👨‍💻 Owner', callback_data='owner'),
-            InlineKeyboardButton('Support 🧩', callback_data='support')
-            ],[
-            InlineKeyboardButton('✗ Close', callback_data='close_data'),
-            InlineKeyboardButton('About ⚠️', callback_data='about')
+            InlineKeyboardButton('✘ 𝗖𝗹𝗼𝘀𝗲', callback_data='close_data'),
+            InlineKeyboardButton('𝗔𝗯𝗼𝘂𝘁 〄', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -467,9 +464,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('« Back', callback_data='start'),
-            InlineKeyboardButton('Status 📊', callback_data='stats'),
-            InlineKeyboardButton('Close ✗', callback_data='close_data')
+            InlineKeyboardButton('« 𝗕𝗮𝗰𝗸', callback_data='start'),
+            InlineKeyboardButton('𝗦𝘁𝗮𝘁𝘂𝘀 ⏍', callback_data='stats'),
+            InlineKeyboardButton('𝗖𝗹𝗼𝘀𝗲 ✘', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -477,30 +474,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-    elif query.data == "support":
-        buttons = [[
-            InlineKeyboardButton('« Back', callback_data='start')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.SUPPORT_TXT,
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
-    elif query.data == "owner":
-        buttons = [[
-            InlineKeyboardButton('« Back', callback_data='start'),
-            InlineKeyboardButton('Contact ☎️', url='https://t.me/MalluBlasters')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=script.OWNER_TXT,
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-        )
     elif query.data == "stats":
         buttons = [[
-            InlineKeyboardButton('« Back', callback_data='about'),
+            InlineKeyboardButton('« 𝗕𝗮𝗰𝗸', callback_data='about'),
             InlineKeyboardButton('Refresh ⏳', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
