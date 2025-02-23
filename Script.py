@@ -17,7 +17,7 @@ class script(object):
 
 <b>○ <i>Build Status : v5.2 [Stable]</b></i>
 
-〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰"""
+〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰"""
     
     STATUS_TXT = """<b><u>📊 STATUS BOARD 📊</u></b>
 
@@ -25,7 +25,7 @@ class script(object):
 <b>➥ Total Members: <code>{}</code></b>
 <b>➥ Total Chats: <code>{}</code></b>
 <b>➥ Used Storage: <code>{}</code></b>
-〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰"""
+〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰"""
     
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
