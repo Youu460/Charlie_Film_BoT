@@ -42,13 +42,10 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('✗ Click To Close This Buttons ✗', callback_data='closeme')
+            InlineKeyboardButton('➜ 𝗔𝗱𝗱 𝗺𝗲 𝘁𝗼 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽 ➜', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('👨‍💻 Owner', callback_data='owner'),
-            InlineKeyboardButton('Support 🧩', callback_data='support')
-            ],[
-            InlineKeyboardButton('✗ Close', callback_data='close_data'),
-            InlineKeyboardButton('About ⚠️', callback_data='about')
+            InlineKeyboardButton('✘ 𝗖𝗹𝗼𝘀𝗲', callback_data='close_data'),
+            InlineKeyboardButton('𝗔𝗯𝗼𝘂𝘁 〄', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -67,7 +64,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "📺 Join Channel 📺", url=invite_link.invite_link
+                    "📺 𝗝𝗼𝗶𝗻 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 📺", url=invite_link.invite_link
                 )
             ]
         ]
@@ -76,9 +73,9 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton("🔁 Try Again 🔁", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton("🔁 𝗧𝗿𝘆 𝗔𝗴𝗮𝗶𝗻 🔁", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton("🔁 Try Again 🔁", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton("🔁 𝗧𝗿𝘆 𝗔𝗴𝗮𝗶𝗻 🔁", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_photo(
             chat_id=message.from_user.id,
             photo=FORCE_IMG,
@@ -89,13 +86,10 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('✗ Click To Close This Buttons ✗', callback_data='closeme')
+            InlineKeyboardButton('➜ 𝗔𝗱𝗱 𝗺𝗲 𝘁𝗼 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽 ➜', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('👨‍💻 Owner', callback_data='owner'),
-            InlineKeyboardButton('Support 🧩', callback_data='support')
-            ],[
-            InlineKeyboardButton('✗ Close', callback_data='close_data'),
-            InlineKeyboardButton('About ⚠️', callback_data='about')
+            InlineKeyboardButton('✘ 𝗖𝗹𝗼𝘀𝗲', callback_data='close_data'),
+            InlineKeyboardButton('𝗔𝗯𝗼𝘂𝘁 〄', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
