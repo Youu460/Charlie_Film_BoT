@@ -2,7 +2,6 @@ class script(object):
     START_TXT = """<b><i>🥀Hello {}, Nice to meet you👀</i></b>
     
 <b><i>I can provide movies and Web-Series for you just make to admin your group and Ues me..💫</i></b>
-
 〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰"""
     
     ABOUT_TXT = """<b>━━━❰ {} ❱━━━➣</b>
