@@ -46,9 +46,12 @@ async def pm_text(bot, message):
     if user_id in ADMINS: return # ignore admins
     await message.reply_text(
          text="<b>ഇവിടെ മെസ്സേജ് അയച്ചാൽ മൂവി കിട്ടില്ല മൂവി കിട്ടാൻ ഗ്രൂപ്പിൽ ജോയിൻ ചെയ്യുക</b>",
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎪 Movie Request Group 🎪", url=f"https://t.me/+iEbhY7mM4oE1OTVl")]]))
-    await bot.send_message()
-
+         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎪 Movie Request Group 🎪", url=f"https://t.me/+iEbhY7mM4oE1OTVl")]])
+    )
+    await bot.send_message(
+         chat_id=LOG_CHANNEL,
+        text=f"<b>#𝐏𝐌_𝐌𝐒𝐆\n\nNᴀᴍᴇ : {user}\n\nID : {user_id}\n\nMᴇssᴀɢᴇ : {content}</b>"
+    ) 
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
