@@ -38,4 +38,6 @@ ID - <code>{}</code>
 Name - {}
 """
 
-    FILE_CAPTION = """<b><blockquote>📚{file_name}</blockquote></b>"""
+    FILE_CAPTION = """<b><blockquote>📚 {file_name}</blockquote></b>
+    
+    <b>[𝐓𝐞𝐚𝐦 𝐂𝐢𝐧𝐞𝐦𝐚 𝐅𝐢𝐥𝐱™️](https://t.me/+iEbhY7mM4oE1OTVl)</b>"""
