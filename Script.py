@@ -38,4 +38,4 @@ ID - <code>{}</code>
 Name - {}
 """
 
-    FILE_CAPTION = """<b>📁File Name :</b> <b><code>{file_name}</code></b>"""
+    FILE_CAPTION = """<b><blockquote>📚{file_name</blockquote></b>"""
