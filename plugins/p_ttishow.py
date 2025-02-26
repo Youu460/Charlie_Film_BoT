@@ -53,7 +53,7 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>")
+                temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title} ഗ്രൂപ്പിലേക്ക് സ്വാഗതം..\n\nസിനിമ സീരീസ് അപ്‌ലോഡ്  ചെയ്തിട്ടുണ്ട്സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക..!\n\nSearch [Google.com] find the Correct spelling of movie name and year.Then type that in to get the files.!\n\nNB: ഞങ്ങളുടെ മെയിൻ ചാനലിൽ കൂടി ജോയിൻ ചെയ്താലേ സിനിമകളിലേക്കുമുള്ള അക്‌സസ് ലഭിക്കുകയൊള്ളു.\n\nJoin the main channel to get access to all the movie files.</b>")
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
