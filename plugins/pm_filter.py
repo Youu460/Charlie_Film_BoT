@@ -608,8 +608,18 @@ async def auto_filter(client, msg, spoll=False):
                 ),
             ]
             for file in files
-        ]    
-
+        ]   
+    btn.insert(0, 
+        [
+            InlineKeyboardButton(f'🌟 {search} 🌟', 'dupe')
+        ]
+    )
+    btn.insert(1,
+        [
+            InlineKeyboardButton("⚡Check My Pm⚡", url=f"https://t.me/{temp.U_NAME}"),
+            InlineKeyboardButton("⚠️Main Channel⚠️", url="https://t.me/cinema_flix_updates")
+        ]
+    ) 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         BUTTONS[key] = search
