@@ -2,8 +2,7 @@ class script(object):
     START_TXT = """<b><i>🥀Hello {}, Nice to meet you👀</i></b>
     
 <b><i>I can provide movies and Web-Series for you just make to admin your group and Ues me..💫</i></b>
-〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰
-
+<b>〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰</b>
 <b><a href=https://t.me/+iEbhY7mM4oE1OTVl>©️𝐓𝐞𝐚𝐦 𝐂𝐢𝐧𝐞𝐦𝐚 𝐅𝐢𝐥𝐱™️</b></a>"""
     
     ABOUT_TXT = """<b>━━━❰ {} ❱━━━➣</b>
@@ -20,7 +19,7 @@ class script(object):
 
 <b>○ <i>Build Status : v5.2 [Stable]</b></i>
 
-〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰"""
+<b>〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰</b>"""
     
     STATUS_TXT = """<b><u>📊 STATUS BOARD 📊</u></b>
 
@@ -28,7 +27,7 @@ class script(object):
 <b>➥ Total Members: <code>{}</code></b>
 <b>➥ Total Chats: <code>{}</code></b>
 <b>➥ Used Storage: <code>{}</code></b>
-〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰"""
+<b>〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰</b>"""
     
     LOG_TEXT_G = """#NewGroup
 Group = {}(<code>{}</code>)
@@ -40,6 +39,6 @@ ID - <code>{}</code>
 Name - {}
 """
 
-    FILE_CAPTION = """<b><blockquote>📚 {file_name}</blockquote></b>
+    FILE_CAPTION = """<b><blockquote>📚 <code>{file_name}</code> </blockquote></b>
     
     <b>[©️𝐓𝐞𝐚𝐦 𝐂𝐢𝐧𝐞𝐦𝐚 𝐅𝐢𝐥𝐱™️](https://t.me/+iEbhY7mM4oE1OTVl)</b>"""
