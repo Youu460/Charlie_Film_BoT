@@ -23,10 +23,10 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton('🛡 ᴄʜᴀɴɴᴇʟ', url='https://t.me/CINEMACLUBLINKZ'),
+                InlineKeyboardButton('🛡 𝐂𝐡𝐚𝐧𝐧𝐞𝐥', url='https://t.me/cinema_flix_updates'),
             ],
             [
-                InlineKeyboardButton('🧩 ɢʀᴏᴜᴘ', url='https://t.me/+lTcjMF6iKqs1MjJl')
+                InlineKeyboardButton('🧩 𝐌𝐨𝐯𝐢𝐞 𝐆𝐫𝐨𝐮𝐩', url='https://t.me/+iEbhY7mM4oE1OTVl')
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -237,7 +237,7 @@ async def start(client, message):
         f_caption = f"{files.file_name}"
     buttons = [
                     [
-                        InlineKeyboardButton('💥 𝗚𝗿𝗼𝘂𝗽 ', url="https://t.me/+lTcjMF6iKqs1MjJl"),
+                        InlineKeyboardButton('💥 𝗚𝗿𝗼𝘂𝗽 ', url="https://t.me/+iEbhY7mM4oE1OTVl"),
                         InlineKeyboardButton('𝗗𝗲𝗹𝗲𝘁𝗲 ⚠️', callback_data='close_data')
                     ],
                     [
