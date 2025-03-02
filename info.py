@@ -22,7 +22,7 @@ CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'https://envs.sh/te8.jpg https://envs.sh/te7.jpg')).split()
 FORCE_IMG = environ.get('FORCE_IMG', "https://envs.sh/47.jpg")
-NOR_IMG = environ.get('NOR_IMG', "https://envs.sh/i43.jpg")
+NOR_IMG = environ.get('NOR_IMG', "CAACAgUAAxkBAAINdmL9uWnC3ptj9YnTjFU4YGr5dtzwAAIEAAPBJDExieUdbguzyBAeBA")
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
