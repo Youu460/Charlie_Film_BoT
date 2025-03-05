@@ -42,8 +42,8 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('✘ 𝗖𝗹𝗼𝘀𝗲', callback_data='close_data'),
-            InlineKeyboardButton('𝗔𝗯𝗼𝘂𝘁 〄', callback_data='about')
+            InlineKeyboardButton('✘ Cʟᴏꜱᴇ', callback_data='close_data'),
+            InlineKeyboardButton('Aʙᴏᴜᴛ 〄', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -62,7 +62,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "📺 𝗝𝗼𝗶𝗻 𝗖𝗵𝗮𝗻𝗻𝗲𝗹 📺", url=invite_link.invite_link
+                    "📺 Jᴏɪɴ Cʜᴀɴɴᴇʟ 📺", url=invite_link.invite_link
                 )
             ]
         ]
@@ -71,9 +71,9 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton("🔁 𝗧𝗿𝘆 𝗔𝗴𝗮𝗶𝗻 🔁", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton("🔁 Tʀʏ Aɢᴀɪɴ 🔁", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton("🔁 𝗧𝗿𝘆 𝗔𝗴𝗮𝗶𝗻 🔁", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton("🔁 Tʀʏ Aɢᴀɪɴ 🔁", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_photo(
             chat_id=message.from_user.id,
             photo=FORCE_IMG,
@@ -84,8 +84,8 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('✘ 𝗖𝗹𝗼𝘀𝗲', callback_data='close_data'),
-            InlineKeyboardButton('𝗔𝗯𝗼𝘂𝘁 〄', callback_data='about')
+            InlineKeyboardButton('✘ Cʟᴏꜱᴇ', callback_data='close_data'),
+            InlineKeyboardButton('Aʙᴏᴜᴛ 〄', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -233,11 +233,11 @@ async def start(client, message):
         f_caption = f"{files.file_name}"
     buttons = [
                     [
-                        InlineKeyboardButton('💥 𝗚𝗿𝗼𝘂𝗽 ', url="https://t.me/+iEbhY7mM4oE1OTVl"),
-                        InlineKeyboardButton('𝗗𝗲𝗹𝗲𝘁𝗲 ⚠️', callback_data='close_data')
+                        InlineKeyboardButton('💥 Gʀᴏᴜᴩ', url="https://t.me/+iEbhY7mM4oE1OTVl"),
+                        InlineKeyboardButton('Dᴇʟᴇᴛᴇ ⚠️', callback_data='close_data')
                     ],
                     [
-                        InlineKeyboardButton(text=f'🌿 𝗙𝗶𝗹𝗲 𝗦𝗶𝘇𝗲 【 {size} 】🌿', callback_data='gxneo')
+                        InlineKeyboardButton(text=f'⚙️ Fɪʟᴇ Sɪᴢᴇ 【 {size} 】⚙️', callback_data='gxneo')
                     ]
                     ]
     await client.send_cached_media(
