@@ -385,10 +385,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('💥 𝗚𝗿𝗼𝘂𝗽', url="https://t.me/+iEbhY7mM4oE1OTVl"),
-                          InlineKeyboardButton('𝗗𝗲𝗹𝗲𝘁𝗲 ⚠️', callback_data='close_data')
+                          InlineKeyboardButton('💥 Gʀᴏᴜᴩ', url="https://t.me/+iEbhY7mM4oE1OTVl"),
+                          InlineKeyboardButton('Dᴇʟᴇᴛᴇ ⚠️', callback_data='close_data')
                           ],[
-                          InlineKeyboardButton(text=f'🌿 𝗙𝗶𝗹𝗲 𝗦𝗶𝘇𝗲 【 {size} 】🌿', callback_data='gxneo')
+                          InlineKeyboardButton(text=f'⚙️ Fɪʟᴇ Sɪᴢᴇ 【 {size} 】⚙️', callback_data='gxneo')
                          ]
                         ]
                     )
@@ -431,10 +431,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                  InlineKeyboardButton('💥 𝗚𝗿𝗼𝘂𝗽', url="https://t.me/+iEbhY7mM4oE1OTVl"),
-                  InlineKeyboardButton('𝗗𝗲𝗹𝗲𝘁𝗲 ⚠️', callback_data='close_data')
+                  InlineKeyboardButton('💥 Gʀᴏᴜᴩ', url="https://t.me/+iEbhY7mM4oE1OTVl"),
+                  InlineKeyboardButton('Dᴇʟᴇᴛᴇ ⚠️', callback_data='close_data')
                   ],[
-                  InlineKeyboardButton(text=f'🌿 𝗙𝗶𝗹𝗲 𝗦𝗶𝘇𝗲 【 {size} 】🌿', callback_data='gxneo')
+                  InlineKeyboardButton(text=f'⚙️ Fɪʟᴇ Sɪᴢᴇ 【 {size} 】⚙️', callback_data='gxneo')
                  ]
                 ]
             )
@@ -467,7 +467,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "stats":
         buttons = [[
             InlineKeyboardButton('🔙 Bᴀᴄᴋ', callback_data='about'),
-            InlineKeyboardButton('𝗥𝗲𝗳𝗿𝗲𝘀𝗵 ✦', callback_data='rfrsh')
+            InlineKeyboardButton('Rᴇꜰʀᴇꜱʜ ✦', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
@@ -486,7 +486,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer("Fetching MongoDb DataBase")
         buttons = [[
             InlineKeyboardButton('🔙 Bᴀᴄᴋ', callback_data='about'),
-            InlineKeyboardButton('𝗥𝗲𝗳𝗿𝗲𝘀𝗵 ✦', callback_data='rfrsh')
+            InlineKeyboardButton('Rᴇꜰʀᴇꜱʜ ✦', callback_data='rfrsh')
         ]]
         await client.edit_message_media(
             query.message.chat.id, 
@@ -609,15 +609,10 @@ async def auto_filter(client, msg, spoll=False):
         ]   
     btn.insert(0, 
         [
-            InlineKeyboardButton(f'🌟 {search} 🌟', 'dupe')
+            InlineKeyboardButton(f'🎬 {search} 🎬', 'dupe')
         ]
     )
-    btn.insert(1,
-        [
-            InlineKeyboardButton("⚡Check My Pm⚡", url=f"https://t.me/{temp.U_NAME}"),
-            InlineKeyboardButton("⚠️Main Channel⚠️", url="https://t.me/cinema_flix_updates")
-        ]
-    ) 
+
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         BUTTONS[key] = search
