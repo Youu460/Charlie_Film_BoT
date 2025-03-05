@@ -443,8 +443,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('✘ 𝗖𝗹𝗼𝘀𝗲', callback_data='close_data'),
-            InlineKeyboardButton('𝗔𝗯𝗼𝘂𝘁 〄', callback_data='about')
+            InlineKeyboardButton('✘ Cʟᴏꜱᴇ', callback_data='close_data'),
+            InlineKeyboardButton('Aʙᴏᴜᴛ 〄', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -454,9 +454,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('« 𝗕𝗮𝗰𝗸', callback_data='start'),
-            InlineKeyboardButton('𝗦𝘁𝗮𝘁𝘂𝘀 ⏍', callback_data='stats'),
-            InlineKeyboardButton('𝗖𝗹𝗼𝘀𝗲 ✘', callback_data='close_data')
+            InlineKeyboardButton('🔙 Bᴀᴄᴋ', callback_data='start'),
+            InlineKeyboardButton('⏍ Sᴛᴀᴛᴜꜱ ⏍', callback_data='stats'),
+            InlineKeyboardButton('Cʟᴏꜱᴇ ✘', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -466,7 +466,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "stats":
         buttons = [[
-            InlineKeyboardButton('« 𝗕𝗮𝗰𝗸', callback_data='about'),
+            InlineKeyboardButton('🔙 Bᴀᴄᴋ', callback_data='about'),
             InlineKeyboardButton('𝗥𝗲𝗳𝗿𝗲𝘀𝗵 ✦', callback_data='rfrsh')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -485,7 +485,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "rfrsh":
         await query.answer("Fetching MongoDb DataBase")
         buttons = [[
-            InlineKeyboardButton('« 𝗕𝗮𝗰𝗸', callback_data='about'),
+            InlineKeyboardButton('🔙 Bᴀᴄᴋ', callback_data='about'),
             InlineKeyboardButton('𝗥𝗲𝗳𝗿𝗲𝘀𝗵 ✦', callback_data='rfrsh')
         ]]
         await client.edit_message_media(
@@ -629,7 +629,7 @@ async def auto_filter(client, msg, spoll=False):
         )
     else:
         btn.append(
-            [InlineKeyboardButton(text="📍  📍", callback_data="pages")]
+            [InlineKeyboardButton(text="📍 Nᴏ Mᴏʀᴇ Nᴇxᴛ Pᴀɢᴇꜱ 📍", callback_data="pages")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     TEMPLATE = settings['template']
