@@ -39,7 +39,6 @@ async def give_filter(client, message):
     if k == False:
         await auto_filter(client, message)
 
-
 @Client.on_callback_query(filters.regex(r"^pmnext"))
 async def pm_next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
