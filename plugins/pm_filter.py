@@ -61,29 +61,8 @@ async def pm_next_page(bot, query):
     if not files:
         return
     
-        btn = [
-            [
-                InlineKeyboardButton(
-                    text=f"📥 {get_size(file.file_size)}📁{file.file_name}", callback_data=f'files#{file.file_id}'
-                ),
-            ]
-            for file in files
-        ]
-    else:
-        btn = [
-            [
-                InlineKeyboardButton(
-                    text=f"{file.file_name}", callback_data=f'files#{file.file_id}'
-                ),
-                InlineKeyboardButton(
-                    text=f" {get_size(file.file_size)}",
-                    callback_data=f'files_#{file.file_id}',
-                ),
-            ]
-           for file in files
-
-        ]  
-    
+        btn = [[InlineKeyboardButton(text=f"📥 {get_size(file.file_size)}📁{file.file_name}", callback_data=f'pmfile#{file.file_id}')] for file in files ]
+                
     if 0 < offset <= 10:
         off_set = 0
     elif offset == 0:
@@ -92,7 +71,7 @@ async def pm_next_page(bot, query):
         off_set = offset - 10
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("⭅ Bᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
+            [InlineKeyboardButton("⭅ Bᴀᴄᴋ", callback_data=f"pmnext_{req}_{key}_{off_set}"),
              InlineKeyboardButton(f" {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
              InlineKeyboardButton("Dᴇʟᴇᴛᴇ 🗑️", callback_data="close_data")]
         )
@@ -100,13 +79,13 @@ async def pm_next_page(bot, query):
         btn.append(
             [InlineKeyboardButton("❏ Pᴀɢᴇ", callback_data="pages"),
              InlineKeyboardButton(f" {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton("Nᴇxᴛ ⇛", callback_data=f"next_{req}_{key}_{n_offset}")])
+             InlineKeyboardButton("Nᴇxᴛ ⇛", callback_data=f"pmnext_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
-                InlineKeyboardButton("⭅ Bᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton("⭅ Bᴀᴄᴋ", callback_data=f"pmnext_{req}_{key}_{off_set}"),
                 InlineKeyboardButton(f" {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-                InlineKeyboardButton("Nᴇxᴛ ⇛", callback_data=f"next_{req}_{key}_{n_offset}")
+                InlineKeyboardButton("Nᴇxᴛ ⇛", callback_data=f"pmnext_{req}_{key}_{n_offset}")
             ],
         )
     try:
