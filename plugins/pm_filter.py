@@ -39,62 +39,15 @@ async def give_filter(client, message):
     if k == False:
         await auto_filter(client, message)
 
-@Client.on_callback_query(filters.regex(r"^pmnext"))
-async def pm_next_page(bot, query):
-    ident, req, key, offset = query.data.split("_")
-    try:
-        offset = int(offset)
-    except:
-        offset = 0
-    search = PM_BUTTONS.get(key)
-    if not search:
-        await query.answer("You are using one of my old messages, please send the request again.", show_alert=True)
-        return
 
-    files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
-    try:
-        n_offset = int(n_offset)
-    except:
-        n_offset = 0
-
-    if not files:
-        return
-    
-        btn = [[InlineKeyboardButton(text=f"📥 {get_size(file.file_size)}📁{file.file_name}", callback_data=f'pmfile#{file.file_id}')] for file in files ]
-                
-    if 0 < offset <= 10:
-        off_set = 0
-    elif offset == 0:
-        off_set = None
-    else:
-        off_set = offset - 10
-    if n_offset == 0:
-        btn.append(
-            [InlineKeyboardButton("⭅ Bᴀᴄᴋ", callback_data=f"pmnext_{req}_{key}_{off_set}"),
-             InlineKeyboardButton(f" {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton("Dᴇʟᴇᴛᴇ 🗑️", callback_data="close_data")]
-        )
-    elif off_set is None:
-        btn.append(
-            [InlineKeyboardButton("❖ Pᴀɢᴇꜱ", callback_data="pages"),
-             InlineKeyboardButton(f" {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton("Nᴇxᴛ ⇛", callback_data=f"pmnext_{req}_{key}_{n_offset}")])
-    else:
-        btn.append(
-            [
-                InlineKeyboardButton("⭅ Bᴀᴄᴋ", callback_data=f"pmnext_{req}_{key}_{off_set}"),
-                InlineKeyboardButton(f" {math.ceil(int(offset) / 10) + 1} / {math.ceil(total / 10)}", callback_data="pages"),
-                InlineKeyboardButton("Nᴇxᴛ ⇛", callback_data=f"pmnext_{req}_{key}_{n_offset}")
-            ],
-        )
-    try:
-        await query.edit_message_reply_markup(
-            reply_markup=InlineKeyboardMarkup(btn)
-        )
-    except MessageNotModified:
-        pass
-    await query.answer()
-
+@Client.on_message(filters.private & filters.text)
+async def pm_search(client, message):
+    files, n_offset, total = await get_search_results(message.text)
+    if int(total) != 0:
+        btn = [[
+            InlineKeyboardButton("Here", url=FILMS_LINK)
+        ]]
+        await message.reply_text(f'Total {total} results found in this group', reply_markup=InlineKeyboardMarkup(btn))
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
