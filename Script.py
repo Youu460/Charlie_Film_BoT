@@ -2,10 +2,10 @@ class script(object):
     START_TXT = """<b><i>✨Hello {}, Nice to meet you👀</i></b>
     
 <b><i> I am a an autofilter bot which finds & shares media from my database.</i></b>
-<b>〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰</b>
+<b>▣════════════════════▣</b>
 <b><a href=https://t.me/+DewZ33fYpEYxYWZl>𝘔𝘊 𝘊𝘐𝘕𝘌𝘔𝘈𝘚 ✨</b></a>"""
     
-    ABOUT_TXT = """<b>━━━❰ {} ❱━━━➣</b>
+    ABOUT_TXT = """<b>▣═════▣ {} ▣═════▣</b>
     
 <b>👨‍💻 <i>Owner Name : <a href=https://t.me/Leomc_bot>𝘔𝘊 𝘊𝘐𝘕𝘌𝘔𝘈𝘚 ✨</b></a></i>
 
@@ -19,7 +19,7 @@ class script(object):
 
 <b>🚀 <i>Build Status : v5.2 [Stable]</b></i>
 
-<b>〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰</b>"""
+<b>▣════════════════════▣</b>"""
     
     STATUS_TXT = """<b><u>📊 STATUS BOARD 📊</u></b>
 
