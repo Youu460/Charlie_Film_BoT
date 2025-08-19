@@ -1,7 +1,7 @@
 class script(object):
     START_TXT = """<b><i>🥀Hello {}, Nice to meet you👀</i></b>
     
-<b><i>I can provide movies and Web-Series for you just make to admin your group and Ues me..💫</i></b>
+<b><i> I am a an autofilter bot which finds & shares media from my database.</i></b>
 <b>〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰</b>
 <b><a href=https://t.me/+iEbhY7mM4oE1OTVl>©️𝐓𝐞𝐚𝐦 𝐂𝐢𝐧𝐞𝐦𝐚 𝐅𝐢𝐥𝐱™️</b></a>"""
     
