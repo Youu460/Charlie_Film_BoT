@@ -7,7 +7,7 @@ class script(object):
     
     ABOUT_TXT = """<b>━━━❰ {} ❱━━━➣</b>
     
-<b>○ <i>Owner Name : <a href=https://t.me/TG_x_filter>🇮🇳 𝗛𝗘𝗗𝗗𝗬 ◢ ◤</b></a></i>
+<b>○ <i>Owner Name : <a href=https://t.me/Leomc_bot>𝘔𝘊 𝘊𝘐𝘕𝘌𝘔𝘈𝘚 ✨</b></a></i>
 
 <b>○ <i>Creator : <a href=tg://settings>My Friend</b></a></i>
 
