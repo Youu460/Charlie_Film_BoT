@@ -1,9 +1,9 @@
 class script(object):
-    START_TXT = """<b><i>🥀Hello {}, Nice to meet you👀</i></b>
+    START_TXT = """<b><i>✨Hello {}, Nice to meet you👀</i></b>
     
 <b><i> I am a an autofilter bot which finds & shares media from my database.</i></b>
 <b>〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰</b>
-<b><a href=https://t.me/+iEbhY7mM4oE1OTVl>©️𝐓𝐞𝐚𝐦 𝐂𝐢𝐧𝐞𝐦𝐚 𝐅𝐢𝐥𝐱™️</b></a>"""
+<b><a href=https://t.me/+DewZ33fYpEYxYWZl>𝘔𝘊 𝘊𝘐𝘕𝘌𝘔𝘈𝘚 ✨</b></a>"""
     
     ABOUT_TXT = """<b>━━━❰ {} ❱━━━➣</b>
     
