@@ -7,17 +7,17 @@ class script(object):
     
     ABOUT_TXT = """<b>━━━❰ {} ❱━━━➣</b>
     
-<b>○ <i>Owner Name : <a href=https://t.me/Leomc_bot>𝘔𝘊 𝘊𝘐𝘕𝘌𝘔𝘈𝘚 ✨</b></a></i>
+<b>👨‍💻 <i>Owner Name : <a href=https://t.me/Leomc_bot>𝘔𝘊 𝘊𝘐𝘕𝘌𝘔𝘈𝘚 ✨</b></a></i>
 
-<b>○ <i>Creator : <a href=tg://settings>My Friend</b></a></i>
+<b>👨‍💻 <i>Creator : <a href=tg://settings>My Friend</b></a></i>
 
-<b>○ <i>Library : Pyrogram</b></i>
+<b>📚 <i>Library : Pyrogram</b></i>
 
-<b>○ <i>Language : Python3</b></i>
+<b>🧠 <i>Language : Python3</b></i>
 
-<b>○ <i>Data Base : MongoDB</b></i>
+<b>💾 <i>Data Base : MongoDB</b></i>
 
-<b>○ <i>Build Status : v5.2 [Stable]</b></i>
+<b>🚀 <i>Build Status : v5.2 [Stable]</b></i>
 
 <b>〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰〰</b>"""
     
